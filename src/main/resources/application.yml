@@ -1,0 +1,35 @@
+debug: true
+server:
+  port: 3010
+  applications:
+    sms_api_key: 6SCzcO1CzznAffqHDTdfr4b2atB+d1HE22rGGWa5kWM=
+    sms_client_id: e038f2d0-1e34-46ef-8513-92a2ee011a57
+    sms_base_url: https://api.mylogin.co.in/api/v2/
+    sms_sender_id: BWBHSC
+
+logging:
+  file:
+    name: logs/applications.log
+
+### Mysql Connection
+
+spring:
+  datasource:
+    name: bharosa_safecrop_v0.1
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://bharosadb.coajbyl1karu.ap-south-1.rds.amazonaws.com:3306/bharosa_safecrop_v0.1
+    username: admin
+    password: safecrop1234
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    propertie:
+    hibernate.dialect: org.hibernate.dialect.MySQL55Dialect
+
+##########JWT Token
+security:
+  jwt:
+    token:
+      secret-key: BWBHDTR3WF'_KxRj3x!h8ud#FgLeeq[S\~9L2021
+      expire-length: 86400000
